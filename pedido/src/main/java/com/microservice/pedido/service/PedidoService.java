@@ -26,8 +26,6 @@ public class PedidoService {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String URL_CLIENTES =
-            "http://localhost:8081/api/v1/clientes/buscar/";
 
     private static final String URL_PRODUCTOS =
             "http://localhost:8086/api/v1/productos/buscar/";
@@ -37,14 +35,12 @@ public class PedidoService {
 
     public Pedido crearPedido(Pedido pedido) {
 
-    // 1. Verificar cliente
-    ClienteDTO cliente = restTemplate.getForObject(
-            URL_CLIENTES + pedido.getIdCliente(),
-            ClienteDTO.class);
-
-    if (cliente == null) {
-        throw new RuntimeException("Cliente no encontrado");
-    }
+        String url = "http://localhost:8081/api/v1/clientes/buscar/" + pedido.getIdCliente();
+        ClienteDTO cliente = restTemplate.getForObject(url, ClienteDTO.class);
+        
+        if(cliente!=null){
+                return repository.save(pedido);
+        }
 
     // 2. Procesar productos
     for (ProductoPedido item : pedido.getProductos()) {

@@ -16,7 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductoPedido {
-
+    @Id
+    private Long idDetalle;
     private Long idProducto;
 
     private String nombProducto;
