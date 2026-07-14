@@ -1,2 +1,4 @@
-Microservicio Inventario y catalogo: <img width="762" height="611" alt="image" src="https://github.com/user-attachments/assets/6a3e4617-ada4-4b4d-a2d0-14d20858a746" />
-<img width="717" height="362" alt="image" src="https://github.com/user-attachments/assets/d75a259d-d36c-4c80-8d40-2c96ebc4a624" />
+Microservicio Ventas y Pedido: <img width="1106" height="745" alt="image" src="https://github.com/user-attachments/assets/c7fe31f9-fb13-48c7-b552-dc4aa8276475" />
+
+<img width="1062" height="505" alt="image" src="https://github.com/user-attachments/assets/ba8b1d89-d53b-488c-a4fc-ca9306467bcb" />
+
